@@ -1,0 +1,29 @@
+name: Decode Riftera images
+
+on:
+  push:
+    paths:
+      - 'imgpack/COMPLETE'
+
+permissions:
+  contents: write
+
+jobs:
+  decode:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode and unpack images
+        run: |
+          cat imgpack/chunk-* | base64 -d > /tmp/images.tar
+          tar -xf /tmp/images.tar
+          test -f nft/images/free/1.png
+          test -f nft/images/free/444.png
+          test -f nft/images/paid/1001.png
+          test -f nft/images/paid/1667.png
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add nft/images
+          git rm -r --quiet imgpack
+          git commit -m "Riftera: unpack 1,111 NFT images"
+          git push
