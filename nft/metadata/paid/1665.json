@@ -1,0 +1,63 @@
+{
+  "name": "Rifter #1665",
+  "description": "A Common Voidborne hero of Starfall Court, bound to the Frost aura and carrying a Ancient Rune. Paid edition — unlocks the Riftera game. One of 1,111 unique Rifters on BNB Chain, minted with a Binance Agent ID.",
+  "image": "https://riftera.github.io/Riftera-og/nft/images/paid/1665.png",
+  "attributes": [
+    {
+      "trait_type": "Edition",
+      "value": "Paid"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Faction",
+      "value": "Voidborne"
+    },
+    {
+      "trait_type": "Realm",
+      "value": "Starfall Court"
+    },
+    {
+      "trait_type": "Rune",
+      "value": "ᚢ"
+    },
+    {
+      "trait_type": "Aura",
+      "value": "Frost"
+    },
+    {
+      "trait_type": "Power",
+      "value": 399
+    },
+    {
+      "trait_type": "Headgear",
+      "value": "Moon Hood"
+    },
+    {
+      "trait_type": "Weapon",
+      "value": "Eclipse Daggers"
+    },
+    {
+      "trait_type": "Armor",
+      "value": "Aegis Plate"
+    },
+    {
+      "trait_type": "Cloak",
+      "value": "Royal Violet"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "Ancient Rune"
+    },
+    {
+      "trait_type": "Art Style",
+      "value": "Chibi Pixel"
+    },
+    {
+      "trait_type": "Master",
+      "value": "Star Collector"
+    }
+  ]
+}

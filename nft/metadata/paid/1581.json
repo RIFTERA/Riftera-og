@@ -1,0 +1,63 @@
+{
+  "name": "Rifter #1581",
+  "description": "A Common Stormcallers hero of Void Cathedral, bound to the Ember aura and carrying a Storm Eye. Paid edition — unlocks the Riftera game. One of 1,111 unique Rifters on BNB Chain, minted with a Binance Agent ID.",
+  "image": "https://riftera.github.io/Riftera-og/nft/images/paid/1581.png",
+  "attributes": [
+    {
+      "trait_type": "Edition",
+      "value": "Paid"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Faction",
+      "value": "Stormcallers"
+    },
+    {
+      "trait_type": "Realm",
+      "value": "Void Cathedral"
+    },
+    {
+      "trait_type": "Rune",
+      "value": "ᚨ"
+    },
+    {
+      "trait_type": "Aura",
+      "value": "Ember"
+    },
+    {
+      "trait_type": "Power",
+      "value": 318
+    },
+    {
+      "trait_type": "Headgear",
+      "value": "Storm Hood"
+    },
+    {
+      "trait_type": "Weapon",
+      "value": "Tempest Staff"
+    },
+    {
+      "trait_type": "Armor",
+      "value": "Runesteel Plate"
+    },
+    {
+      "trait_type": "Cloak",
+      "value": "Midnight"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "Storm Eye"
+    },
+    {
+      "trait_type": "Art Style",
+      "value": "Chibi Pixel"
+    },
+    {
+      "trait_type": "Master",
+      "value": "Storm Pip"
+    }
+  ]
+}

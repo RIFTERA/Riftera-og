@@ -1,0 +1,63 @@
+{
+  "name": "Rifter #1451",
+  "description": "A Legendary Voidborne hero of Obsidian Throne, bound to the Frost aura and carrying a Moon Sigil. Paid edition — unlocks the Riftera game. One of 1,111 unique Rifters on BNB Chain, minted with a Binance Agent ID.",
+  "image": "https://riftera.github.io/Riftera-og/nft/images/paid/1451.png",
+  "attributes": [
+    {
+      "trait_type": "Edition",
+      "value": "Paid"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    },
+    {
+      "trait_type": "Faction",
+      "value": "Voidborne"
+    },
+    {
+      "trait_type": "Realm",
+      "value": "Obsidian Throne"
+    },
+    {
+      "trait_type": "Rune",
+      "value": "ᚷ"
+    },
+    {
+      "trait_type": "Aura",
+      "value": "Frost"
+    },
+    {
+      "trait_type": "Power",
+      "value": 976
+    },
+    {
+      "trait_type": "Headgear",
+      "value": "Eclipse Mask"
+    },
+    {
+      "trait_type": "Weapon",
+      "value": "Void Scythe"
+    },
+    {
+      "trait_type": "Armor",
+      "value": "Crystalplate Armor"
+    },
+    {
+      "trait_type": "Cloak",
+      "value": "Gilded"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "Moon Sigil"
+    },
+    {
+      "trait_type": "Art Style",
+      "value": "Chibi Pixel"
+    },
+    {
+      "trait_type": "Master",
+      "value": "Chrono Imp"
+    }
+  ]
+}

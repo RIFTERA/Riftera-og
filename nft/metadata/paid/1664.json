@@ -1,0 +1,63 @@
+{
+  "name": "Rifter #1664",
+  "description": "A Common Riftwardens hero of Golden Breach, bound to the Thorn aura and carrying a Void Heart. Paid edition — unlocks the Riftera game. One of 1,111 unique Rifters on BNB Chain, minted with a Binance Agent ID.",
+  "image": "https://riftera.github.io/Riftera-og/nft/images/paid/1664.png",
+  "attributes": [
+    {
+      "trait_type": "Edition",
+      "value": "Paid"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Faction",
+      "value": "Riftwardens"
+    },
+    {
+      "trait_type": "Realm",
+      "value": "Golden Breach"
+    },
+    {
+      "trait_type": "Rune",
+      "value": "ᚨ"
+    },
+    {
+      "trait_type": "Aura",
+      "value": "Thorn"
+    },
+    {
+      "trait_type": "Power",
+      "value": 395
+    },
+    {
+      "trait_type": "Headgear",
+      "value": "Templar Helm"
+    },
+    {
+      "trait_type": "Weapon",
+      "value": "Rift Greatsword"
+    },
+    {
+      "trait_type": "Armor",
+      "value": "Stormforged Armor"
+    },
+    {
+      "trait_type": "Cloak",
+      "value": "Gilded"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "Void Heart"
+    },
+    {
+      "trait_type": "Art Style",
+      "value": "Chibi Pixel"
+    },
+    {
+      "trait_type": "Master",
+      "value": "Shield Captain"
+    }
+  ]
+}

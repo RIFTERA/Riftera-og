@@ -1,0 +1,63 @@
+{
+  "name": "Rifter #1393",
+  "description": "A Common Riftwardens hero of Crystal Deep, bound to the Thorn aura and carrying a Ancient Rune. Paid edition — unlocks the Riftera game. One of 1,111 unique Rifters on BNB Chain, minted with a Binance Agent ID.",
+  "image": "https://riftera.github.io/Riftera-og/nft/images/paid/1393.png",
+  "attributes": [
+    {
+      "trait_type": "Edition",
+      "value": "Paid"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Faction",
+      "value": "Riftwardens"
+    },
+    {
+      "trait_type": "Realm",
+      "value": "Crystal Deep"
+    },
+    {
+      "trait_type": "Rune",
+      "value": "ᚹ"
+    },
+    {
+      "trait_type": "Aura",
+      "value": "Thorn"
+    },
+    {
+      "trait_type": "Power",
+      "value": 255
+    },
+    {
+      "trait_type": "Headgear",
+      "value": "Plumed Helm"
+    },
+    {
+      "trait_type": "Weapon",
+      "value": "Aegis Warblade"
+    },
+    {
+      "trait_type": "Armor",
+      "value": "Shadowweave Armor"
+    },
+    {
+      "trait_type": "Cloak",
+      "value": "Gilded"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "Ancient Rune"
+    },
+    {
+      "trait_type": "Art Style",
+      "value": "Chibi Pixel"
+    },
+    {
+      "trait_type": "Master",
+      "value": "Shield Captain"
+    }
+  ]
+}

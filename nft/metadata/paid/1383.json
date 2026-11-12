@@ -1,0 +1,63 @@
+{
+  "name": "Rifter #1383",
+  "description": "A Common Stormcallers hero of Aurora Rift, bound to the Thorn aura and carrying a Star Fragment. Paid edition — unlocks the Riftera game. One of 1,111 unique Rifters on BNB Chain, minted with a Binance Agent ID.",
+  "image": "https://riftera.github.io/Riftera-og/nft/images/paid/1383.png",
+  "attributes": [
+    {
+      "trait_type": "Edition",
+      "value": "Paid"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Faction",
+      "value": "Stormcallers"
+    },
+    {
+      "trait_type": "Realm",
+      "value": "Aurora Rift"
+    },
+    {
+      "trait_type": "Rune",
+      "value": "ᛇ"
+    },
+    {
+      "trait_type": "Aura",
+      "value": "Thorn"
+    },
+    {
+      "trait_type": "Power",
+      "value": 178
+    },
+    {
+      "trait_type": "Headgear",
+      "value": "Arc Hood"
+    },
+    {
+      "trait_type": "Weapon",
+      "value": "Tempest Staff"
+    },
+    {
+      "trait_type": "Armor",
+      "value": "Obsidian Plate"
+    },
+    {
+      "trait_type": "Cloak",
+      "value": "Gilded"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "Star Fragment"
+    },
+    {
+      "trait_type": "Art Style",
+      "value": "Chibi Pixel"
+    },
+    {
+      "trait_type": "Master",
+      "value": "Storm Pip"
+    }
+  ]
+}

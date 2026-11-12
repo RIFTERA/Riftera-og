@@ -1,0 +1,63 @@
+{
+  "name": "Rifter #1447",
+  "description": "A Rare Stormcallers hero of Void Cathedral, bound to the Ember aura and carrying a Moon Sigil. Paid edition — unlocks the Riftera game. One of 1,111 unique Rifters on BNB Chain, minted with a Binance Agent ID.",
+  "image": "https://riftera.github.io/Riftera-og/nft/images/paid/1447.png",
+  "attributes": [
+    {
+      "trait_type": "Edition",
+      "value": "Paid"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "Faction",
+      "value": "Stormcallers"
+    },
+    {
+      "trait_type": "Realm",
+      "value": "Void Cathedral"
+    },
+    {
+      "trait_type": "Rune",
+      "value": "ᛊ"
+    },
+    {
+      "trait_type": "Aura",
+      "value": "Ember"
+    },
+    {
+      "trait_type": "Power",
+      "value": 623
+    },
+    {
+      "trait_type": "Headgear",
+      "value": "Spiked Crown"
+    },
+    {
+      "trait_type": "Weapon",
+      "value": "Tempest Staff"
+    },
+    {
+      "trait_type": "Armor",
+      "value": "Crystalplate Armor"
+    },
+    {
+      "trait_type": "Cloak",
+      "value": "Emerald"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "Moon Sigil"
+    },
+    {
+      "trait_type": "Art Style",
+      "value": "Chibi Pixel"
+    },
+    {
+      "trait_type": "Master",
+      "value": "Aurora Weaver"
+    }
+  ]
+}
