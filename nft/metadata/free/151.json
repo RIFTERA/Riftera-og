@@ -1,0 +1,63 @@
+{
+  "name": "Rifter #151",
+  "description": "A Common Voidborne hero of Frostmere, bound to the Frost aura and carrying a Storm Eye. Free Riftborn edition. One of 1,111 unique Rifters on BNB Chain, minted with a Binance Agent ID.",
+  "image": "https://riftera.github.io/Riftera-og/nft/images/free/151.png",
+  "attributes": [
+    {
+      "trait_type": "Edition",
+      "value": "Free"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Faction",
+      "value": "Voidborne"
+    },
+    {
+      "trait_type": "Realm",
+      "value": "Frostmere"
+    },
+    {
+      "trait_type": "Rune",
+      "value": "ᚨ"
+    },
+    {
+      "trait_type": "Aura",
+      "value": "Frost"
+    },
+    {
+      "trait_type": "Power",
+      "value": 149
+    },
+    {
+      "trait_type": "Headgear",
+      "value": "Eclipse Mask"
+    },
+    {
+      "trait_type": "Weapon",
+      "value": "Crescent Blades"
+    },
+    {
+      "trait_type": "Armor",
+      "value": "Shadowweave Armor"
+    },
+    {
+      "trait_type": "Cloak",
+      "value": "Midnight"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "Storm Eye"
+    },
+    {
+      "trait_type": "Art Style",
+      "value": "Chibi Pixel"
+    },
+    {
+      "trait_type": "Master",
+      "value": "Lantern Carrier"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "name": "Rifter #165",
+  "description": "A Common Riftwardens hero of Frostmere, bound to the Dawn aura and carrying a Storm Eye. Free Riftborn edition. One of 1,111 unique Rifters on BNB Chain, minted with a Binance Agent ID.",
+  "image": "https://riftera.github.io/Riftera-og/nft/images/free/165.png",
+  "attributes": [
+    {
+      "trait_type": "Edition",
+      "value": "Free"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Faction",
+      "value": "Riftwardens"
+    },
+    {
+      "trait_type": "Realm",
+      "value": "Frostmere"
+    },
+    {
+      "trait_type": "Rune",
+      "value": "ᚦ"
+    },
+    {
+      "trait_type": "Aura",
+      "value": "Dawn"
+    },
+    {
+      "trait_type": "Power",
+      "value": 212
+    },
+    {
+      "trait_type": "Headgear",
+      "value": "Winged Helm"
+    },
+    {
+      "trait_type": "Weapon",
+      "value": "Rift Greatsword"
+    },
+    {
+      "trait_type": "Armor",
+      "value": "Runesteel Plate"
+    },
+    {
+      "trait_type": "Cloak",
+      "value": "Midnight"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "Storm Eye"
+    },
+    {
+      "trait_type": "Art Style",
+      "value": "Chibi Pixel"
+    },
+    {
+      "trait_type": "Master",
+      "value": "Grumpy Squire"
+    }
+  ]
+}

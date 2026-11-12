@@ -1,0 +1,63 @@
+{
+  "name": "Rifter #68",
+  "description": "A Common Stormcallers hero of Thornwood, bound to the Frost aura and carrying a Void Heart. Free Riftborn edition. One of 1,111 unique Rifters on BNB Chain, minted with a Binance Agent ID.",
+  "image": "https://riftera.github.io/Riftera-og/nft/images/free/68.png",
+  "attributes": [
+    {
+      "trait_type": "Edition",
+      "value": "Free"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Faction",
+      "value": "Stormcallers"
+    },
+    {
+      "trait_type": "Realm",
+      "value": "Thornwood"
+    },
+    {
+      "trait_type": "Rune",
+      "value": "ᚲ"
+    },
+    {
+      "trait_type": "Aura",
+      "value": "Frost"
+    },
+    {
+      "trait_type": "Power",
+      "value": 226
+    },
+    {
+      "trait_type": "Headgear",
+      "value": "Storm Hood"
+    },
+    {
+      "trait_type": "Weapon",
+      "value": "Arcane Scepter"
+    },
+    {
+      "trait_type": "Armor",
+      "value": "Shadowweave Armor"
+    },
+    {
+      "trait_type": "Cloak",
+      "value": "Ashen"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "Void Heart"
+    },
+    {
+      "trait_type": "Art Style",
+      "value": "Chibi Pixel"
+    },
+    {
+      "trait_type": "Master",
+      "value": "Umbrella Mage"
+    }
+  ]
+}

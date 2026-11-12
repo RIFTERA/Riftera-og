@@ -1,0 +1,63 @@
+{
+  "name": "Rifter #225",
+  "description": "A Common Voidborne hero of Emberfall, bound to the Void aura and carrying a Star Fragment. Free Riftborn edition. One of 1,111 unique Rifters on BNB Chain, minted with a Binance Agent ID.",
+  "image": "https://riftera.github.io/Riftera-og/nft/images/free/225.png",
+  "attributes": [
+    {
+      "trait_type": "Edition",
+      "value": "Free"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Faction",
+      "value": "Voidborne"
+    },
+    {
+      "trait_type": "Realm",
+      "value": "Emberfall"
+    },
+    {
+      "trait_type": "Rune",
+      "value": "ᚦ"
+    },
+    {
+      "trait_type": "Aura",
+      "value": "Void"
+    },
+    {
+      "trait_type": "Power",
+      "value": 280
+    },
+    {
+      "trait_type": "Headgear",
+      "value": "Moon Hood"
+    },
+    {
+      "trait_type": "Weapon",
+      "value": "Eclipse Daggers"
+    },
+    {
+      "trait_type": "Armor",
+      "value": "Crystalplate Armor"
+    },
+    {
+      "trait_type": "Cloak",
+      "value": "Ashen"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "Star Fragment"
+    },
+    {
+      "trait_type": "Art Style",
+      "value": "Chibi Pixel"
+    },
+    {
+      "trait_type": "Master",
+      "value": "Lantern Carrier"
+    }
+  ]
+}

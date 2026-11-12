@@ -1,0 +1,63 @@
+{
+  "name": "Rifter #138",
+  "description": "A Common Stormcallers hero of Stonereach, bound to the Frost aura and carrying a Star Fragment. Free Riftborn edition. One of 1,111 unique Rifters on BNB Chain, minted with a Binance Agent ID.",
+  "image": "https://riftera.github.io/Riftera-og/nft/images/free/138.png",
+  "attributes": [
+    {
+      "trait_type": "Edition",
+      "value": "Free"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Faction",
+      "value": "Stormcallers"
+    },
+    {
+      "trait_type": "Realm",
+      "value": "Stonereach"
+    },
+    {
+      "trait_type": "Rune",
+      "value": "ᚨ"
+    },
+    {
+      "trait_type": "Aura",
+      "value": "Frost"
+    },
+    {
+      "trait_type": "Power",
+      "value": 157
+    },
+    {
+      "trait_type": "Headgear",
+      "value": "Storm Hood"
+    },
+    {
+      "trait_type": "Weapon",
+      "value": "Arcane Scepter"
+    },
+    {
+      "trait_type": "Armor",
+      "value": "Stormforged Armor"
+    },
+    {
+      "trait_type": "Cloak",
+      "value": "Emerald"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "Star Fragment"
+    },
+    {
+      "trait_type": "Art Style",
+      "value": "Chibi Pixel"
+    },
+    {
+      "trait_type": "Master",
+      "value": "Kite Flyer"
+    }
+  ]
+}

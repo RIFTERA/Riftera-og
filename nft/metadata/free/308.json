@@ -1,0 +1,63 @@
+{
+  "name": "Rifter #308",
+  "description": "A Common Stormcallers hero of Mist Hollow, bound to the Void aura and carrying a Moon Sigil. Free Riftborn edition. One of 1,111 unique Rifters on BNB Chain, minted with a Binance Agent ID.",
+  "image": "https://riftera.github.io/Riftera-og/nft/images/free/308.png",
+  "attributes": [
+    {
+      "trait_type": "Edition",
+      "value": "Free"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Faction",
+      "value": "Stormcallers"
+    },
+    {
+      "trait_type": "Realm",
+      "value": "Mist Hollow"
+    },
+    {
+      "trait_type": "Rune",
+      "value": "ᚷ"
+    },
+    {
+      "trait_type": "Aura",
+      "value": "Void"
+    },
+    {
+      "trait_type": "Power",
+      "value": 254
+    },
+    {
+      "trait_type": "Headgear",
+      "value": "Spiked Crown"
+    },
+    {
+      "trait_type": "Weapon",
+      "value": "Arcane Scepter"
+    },
+    {
+      "trait_type": "Armor",
+      "value": "Obsidian Plate"
+    },
+    {
+      "trait_type": "Cloak",
+      "value": "Midnight"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "Moon Sigil"
+    },
+    {
+      "trait_type": "Art Style",
+      "value": "Chibi Pixel"
+    },
+    {
+      "trait_type": "Master",
+      "value": "Kite Flyer"
+    }
+  ]
+}

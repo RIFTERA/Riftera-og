@@ -1,0 +1,63 @@
+{
+  "name": "Rifter #76",
+  "description": "A Common Riftwardens hero of Mist Hollow, bound to the Frost aura and carrying a Rift Core. Free Riftborn edition. One of 1,111 unique Rifters on BNB Chain, minted with a Binance Agent ID.",
+  "image": "https://riftera.github.io/Riftera-og/nft/images/free/76.png",
+  "attributes": [
+    {
+      "trait_type": "Edition",
+      "value": "Free"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Faction",
+      "value": "Riftwardens"
+    },
+    {
+      "trait_type": "Realm",
+      "value": "Mist Hollow"
+    },
+    {
+      "trait_type": "Rune",
+      "value": "ᚲ"
+    },
+    {
+      "trait_type": "Aura",
+      "value": "Frost"
+    },
+    {
+      "trait_type": "Power",
+      "value": 156
+    },
+    {
+      "trait_type": "Headgear",
+      "value": "Horned Helm"
+    },
+    {
+      "trait_type": "Weapon",
+      "value": "Rift Greatsword"
+    },
+    {
+      "trait_type": "Armor",
+      "value": "Stormforged Armor"
+    },
+    {
+      "trait_type": "Cloak",
+      "value": "Royal Violet"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "Rift Core"
+    },
+    {
+      "trait_type": "Art Style",
+      "value": "Chibi Pixel"
+    },
+    {
+      "trait_type": "Master",
+      "value": "Bucket Helm Boy"
+    }
+  ]
+}
