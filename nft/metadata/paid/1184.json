@@ -1,0 +1,63 @@
+{
+  "name": "Rifter #1184",
+  "description": "A Common Riftwardens hero of Stormspire, bound to the Dawn aura and carrying a Star Fragment. Paid edition — unlocks the Riftera game. One of 1,111 unique Rifters on BNB Chain, minted with a Binance Agent ID.",
+  "image": "https://riftera.github.io/Riftera-og/nft/images/paid/1184.png",
+  "attributes": [
+    {
+      "trait_type": "Edition",
+      "value": "Paid"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Faction",
+      "value": "Riftwardens"
+    },
+    {
+      "trait_type": "Realm",
+      "value": "Stormspire"
+    },
+    {
+      "trait_type": "Rune",
+      "value": "ᛃ"
+    },
+    {
+      "trait_type": "Aura",
+      "value": "Dawn"
+    },
+    {
+      "trait_type": "Power",
+      "value": 211
+    },
+    {
+      "trait_type": "Headgear",
+      "value": "Plumed Helm"
+    },
+    {
+      "trait_type": "Weapon",
+      "value": "Storm Lance"
+    },
+    {
+      "trait_type": "Armor",
+      "value": "Obsidian Plate"
+    },
+    {
+      "trait_type": "Cloak",
+      "value": "Ashen"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "Star Fragment"
+    },
+    {
+      "trait_type": "Art Style",
+      "value": "Chibi Pixel"
+    },
+    {
+      "trait_type": "Master",
+      "value": "Banner Bearer"
+    }
+  ]
+}

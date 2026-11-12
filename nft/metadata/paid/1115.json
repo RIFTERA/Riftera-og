@@ -1,0 +1,63 @@
+{
+  "name": "Rifter #1115",
+  "description": "A Common Voidborne hero of Void Cathedral, bound to the Dawn aura and carrying a Rift Core. Paid edition — unlocks the Riftera game. One of 1,111 unique Rifters on BNB Chain, minted with a Binance Agent ID.",
+  "image": "https://riftera.github.io/Riftera-og/nft/images/paid/1115.png",
+  "attributes": [
+    {
+      "trait_type": "Edition",
+      "value": "Paid"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Faction",
+      "value": "Voidborne"
+    },
+    {
+      "trait_type": "Realm",
+      "value": "Void Cathedral"
+    },
+    {
+      "trait_type": "Rune",
+      "value": "ᚺ"
+    },
+    {
+      "trait_type": "Aura",
+      "value": "Dawn"
+    },
+    {
+      "trait_type": "Power",
+      "value": 196
+    },
+    {
+      "trait_type": "Headgear",
+      "value": "Eclipse Mask"
+    },
+    {
+      "trait_type": "Weapon",
+      "value": "Crescent Blades"
+    },
+    {
+      "trait_type": "Armor",
+      "value": "Crystalplate Armor"
+    },
+    {
+      "trait_type": "Cloak",
+      "value": "Royal Violet"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "Rift Core"
+    },
+    {
+      "trait_type": "Art Style",
+      "value": "Chibi Pixel"
+    },
+    {
+      "trait_type": "Master",
+      "value": "Mirror Twin"
+    }
+  ]
+}

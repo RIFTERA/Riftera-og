@@ -1,0 +1,63 @@
+{
+  "name": "Rifter #1232",
+  "description": "A Rare Voidborne hero of Stormspire, bound to the Ember aura and carrying a Rift Core. Paid edition — unlocks the Riftera game. One of 1,111 unique Rifters on BNB Chain, minted with a Binance Agent ID.",
+  "image": "https://riftera.github.io/Riftera-og/nft/images/paid/1232.png",
+  "attributes": [
+    {
+      "trait_type": "Edition",
+      "value": "Paid"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "Faction",
+      "value": "Voidborne"
+    },
+    {
+      "trait_type": "Realm",
+      "value": "Stormspire"
+    },
+    {
+      "trait_type": "Rune",
+      "value": "ᚱ"
+    },
+    {
+      "trait_type": "Aura",
+      "value": "Ember"
+    },
+    {
+      "trait_type": "Power",
+      "value": 569
+    },
+    {
+      "trait_type": "Headgear",
+      "value": "Void Cowl"
+    },
+    {
+      "trait_type": "Weapon",
+      "value": "Eclipse Daggers"
+    },
+    {
+      "trait_type": "Armor",
+      "value": "Aegis Plate"
+    },
+    {
+      "trait_type": "Cloak",
+      "value": "Crimson"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "Rift Core"
+    },
+    {
+      "trait_type": "Art Style",
+      "value": "Chibi Pixel"
+    },
+    {
+      "trait_type": "Master",
+      "value": "Eclipse Oracle"
+    }
+  ]
+}

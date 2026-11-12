@@ -1,0 +1,63 @@
+{
+  "name": "Rifter #1294",
+  "description": "A Rare Riftwardens hero of Obsidian Throne, bound to the Void aura and carrying a Storm Eye. Paid edition — unlocks the Riftera game. One of 1,111 unique Rifters on BNB Chain, minted with a Binance Agent ID.",
+  "image": "https://riftera.github.io/Riftera-og/nft/images/paid/1294.png",
+  "attributes": [
+    {
+      "trait_type": "Edition",
+      "value": "Paid"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "Faction",
+      "value": "Riftwardens"
+    },
+    {
+      "trait_type": "Realm",
+      "value": "Obsidian Throne"
+    },
+    {
+      "trait_type": "Rune",
+      "value": "ᛃ"
+    },
+    {
+      "trait_type": "Aura",
+      "value": "Void"
+    },
+    {
+      "trait_type": "Power",
+      "value": 621
+    },
+    {
+      "trait_type": "Headgear",
+      "value": "Templar Helm"
+    },
+    {
+      "trait_type": "Weapon",
+      "value": "Rift Greatsword"
+    },
+    {
+      "trait_type": "Armor",
+      "value": "Shadowweave Armor"
+    },
+    {
+      "trait_type": "Cloak",
+      "value": "Ashen"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "Storm Eye"
+    },
+    {
+      "trait_type": "Art Style",
+      "value": "Chibi Pixel"
+    },
+    {
+      "trait_type": "Master",
+      "value": "Frost Warden"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "name": "Rifter #1031",
+  "description": "A Common Stormcallers hero of Crystal Deep, bound to the Frost aura and carrying a Rift Core. Paid edition — unlocks the Riftera game. One of 1,111 unique Rifters on BNB Chain, minted with a Binance Agent ID.",
+  "image": "https://riftera.github.io/Riftera-og/nft/images/paid/1031.png",
+  "attributes": [
+    {
+      "trait_type": "Edition",
+      "value": "Paid"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Faction",
+      "value": "Stormcallers"
+    },
+    {
+      "trait_type": "Realm",
+      "value": "Crystal Deep"
+    },
+    {
+      "trait_type": "Rune",
+      "value": "ᚢ"
+    },
+    {
+      "trait_type": "Aura",
+      "value": "Frost"
+    },
+    {
+      "trait_type": "Power",
+      "value": 174
+    },
+    {
+      "trait_type": "Headgear",
+      "value": "Crystal Circlet"
+    },
+    {
+      "trait_type": "Weapon",
+      "value": "Lightning Spear"
+    },
+    {
+      "trait_type": "Armor",
+      "value": "Shadowweave Armor"
+    },
+    {
+      "trait_type": "Cloak",
+      "value": "Crimson"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "Rift Core"
+    },
+    {
+      "trait_type": "Art Style",
+      "value": "Chibi Pixel"
+    },
+    {
+      "trait_type": "Master",
+      "value": "Storm Pip"
+    }
+  ]
+}

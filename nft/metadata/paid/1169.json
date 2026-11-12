@@ -1,0 +1,63 @@
+{
+  "name": "Rifter #1169",
+  "description": "A Common Voidborne hero of Stormspire, bound to the Storm aura and carrying a Ancient Rune. Paid edition — unlocks the Riftera game. One of 1,111 unique Rifters on BNB Chain, minted with a Binance Agent ID.",
+  "image": "https://riftera.github.io/Riftera-og/nft/images/paid/1169.png",
+  "attributes": [
+    {
+      "trait_type": "Edition",
+      "value": "Paid"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Faction",
+      "value": "Voidborne"
+    },
+    {
+      "trait_type": "Realm",
+      "value": "Stormspire"
+    },
+    {
+      "trait_type": "Rune",
+      "value": "ᛊ"
+    },
+    {
+      "trait_type": "Aura",
+      "value": "Storm"
+    },
+    {
+      "trait_type": "Power",
+      "value": 234
+    },
+    {
+      "trait_type": "Headgear",
+      "value": "Eclipse Mask"
+    },
+    {
+      "trait_type": "Weapon",
+      "value": "Eclipse Daggers"
+    },
+    {
+      "trait_type": "Armor",
+      "value": "Shadowweave Armor"
+    },
+    {
+      "trait_type": "Cloak",
+      "value": "Ashen"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "Ancient Rune"
+    },
+    {
+      "trait_type": "Art Style",
+      "value": "Chibi Pixel"
+    },
+    {
+      "trait_type": "Master",
+      "value": "Crystal Gardener"
+    }
+  ]
+}

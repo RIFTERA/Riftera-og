@@ -1,0 +1,63 @@
+{
+  "name": "Rifter #1015",
+  "description": "A Rare Stormcallers hero of Obsidian Throne, bound to the Storm aura and carrying a Moon Sigil. Paid edition — unlocks the Riftera game. One of 1,111 unique Rifters on BNB Chain, minted with a Binance Agent ID.",
+  "image": "https://riftera.github.io/Riftera-og/nft/images/paid/1015.png",
+  "attributes": [
+    {
+      "trait_type": "Edition",
+      "value": "Paid"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "Faction",
+      "value": "Stormcallers"
+    },
+    {
+      "trait_type": "Realm",
+      "value": "Obsidian Throne"
+    },
+    {
+      "trait_type": "Rune",
+      "value": "ᚲ"
+    },
+    {
+      "trait_type": "Aura",
+      "value": "Storm"
+    },
+    {
+      "trait_type": "Power",
+      "value": 407
+    },
+    {
+      "trait_type": "Headgear",
+      "value": "Storm Hood"
+    },
+    {
+      "trait_type": "Weapon",
+      "value": "Lightning Spear"
+    },
+    {
+      "trait_type": "Armor",
+      "value": "Shadowweave Armor"
+    },
+    {
+      "trait_type": "Cloak",
+      "value": "Midnight"
+    },
+    {
+      "trait_type": "Relic",
+      "value": "Moon Sigil"
+    },
+    {
+      "trait_type": "Art Style",
+      "value": "Chibi Pixel"
+    },
+    {
+      "trait_type": "Master",
+      "value": "Tempest Bard"
+    }
+  ]
+}
