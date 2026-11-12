@@ -11,7 +11,7 @@ A fantasy game-world NFT collection on BNB Chain — 1,111 chibi-pixel Rifters a
 
 Served from this repo via GitHub Pages:
 
-- baseURI: `https://riftera.github.io/Riftera-og/nft/metadata/`
+- baseURI: `https://riftera.net/nft/metadata/`
 - Layout: `nft/metadata/free/<id>.json`, `nft/metadata/paid/<id>.json`, images under `nft/images/`
 
 ## Status
