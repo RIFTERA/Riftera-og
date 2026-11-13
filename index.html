@@ -965,7 +965,8 @@ footer p{color:var(--faint);font-size:.92rem;margin:.5rem 0 0;max-width:40rem}
                   <div class="supply-bar paid"><i id="supPaidBar" style="width:0%"></i></div>
                 </div>
                 <p class="price">0.001 BNB<small>Bright pixels, chunky double frame, Power up to 999 — and the game key in your wallet.</small></p>
-                <a class="btn btn-rift" href="#agent">Mint open now — 0.001 BNB</a>
+                <button class="btn btn-rift" id="mintPaidBtn" type="button">Mint paid now — 0.001 BNB</button>
+                <p id="mintPaidStatus" role="status" style="font-size:.85em;opacity:.85;margin-top:.55rem">Mint straight from this page: connect a BNB Chain wallet holding a Binance Agent ID. One mint per click, exactly 0.001 BNB. Prefer an agent? Use the prompt below.</p>
               </div>
             </div>
 
@@ -1891,6 +1892,62 @@ Execute now. Reply with the tx link only.</pre>
           if (!document.hidden) refresh();
         });
         window.addEventListener('focus', refresh);
+      })();
+    </script>
+    <script>
+      // ---------- DIRECT PAID MINT (Rift Gate) ----------
+      // One-click human mint straight from this page: connects the visitor's
+      // wallet, enforces BNB Chain, checks the Binance Agent ID gate and the
+      // 5-per-wallet paid cap via eth_call, then sends mintPaid() with
+      // exactly 0.001 BNB. The agent prompt below remains as the alternative.
+      (function () {
+        var btn = document.getElementById('mintPaidBtn');
+        if (!btn) return;
+        var st = document.getElementById('mintPaidStatus');
+        var CONTRACT = '0x36fE923C449F6163a601058626dEf6c83a8f23AE';
+        var SEL_MINT_PAID = '0x69907b9b';
+        var SEL_HAS_ID = '0x4eab3ef2';
+        var SEL_PAID_COUNT = '0x3362d20c';
+        var VALUE_HEX = '0x38d7ea4c68000'; // exactly 0.001 BNB
+        function say(t) { if (st) st.textContent = t; }
+        function padAddr(a) { return '000000000000000000000000' + a.replace('0x', '').toLowerCase(); }
+        btn.addEventListener('click', async function () {
+          if (!window.ethereum) {
+            say('No wallet found in this browser. Open riftera.net inside a wallet browser (Binance Wallet, MetaMask or Trust Wallet) to mint here — or copy the agent prompt below and let your agent mint for you.');
+            return;
+          }
+          btn.disabled = true;
+          try {
+            var accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+            var acct = accounts && accounts[0];
+            if (!acct) { say('No account connected. Unlock your wallet and try again.'); btn.disabled = false; return; }
+            var chain = await window.ethereum.request({ method: 'eth_chainId' });
+            if (chain !== '0x38') {
+              try {
+                await window.ethereum.request({ method: 'wallet_switchEthereumChain', params: [{ chainId: '0x38' }] });
+              } catch (e) {
+                say('Please switch your wallet to BNB Chain (56), then press the mint button again.');
+                btn.disabled = false; return;
+              }
+            }
+            var has = await window.ethereum.request({ method: 'eth_call', params: [{ to: CONTRACT, data: SEL_HAS_ID + padAddr(acct) }, 'latest'] });
+            if (!has || BigInt(has) === 0n) {
+              say('This wallet holds no Binance Agent ID (.ai) NFT — the Rift Gate is gated. Connect an Agent ID wallet, or let your agent mint with the prompt below.');
+              btn.disabled = false; return;
+            }
+            var cnt = await window.ethereum.request({ method: 'eth_call', params: [{ to: CONTRACT, data: SEL_PAID_COUNT + padAddr(acct) }, 'latest'] });
+            if (cnt && BigInt(cnt) >= 5n) {
+              say('This wallet already minted its 5 paid Rifters — the per-wallet cap is reached. Thank you, Rifter.');
+              btn.disabled = false; return;
+            }
+            say('Confirm in your wallet: mintPaid() with exactly 0.001 BNB…');
+            var tx = await window.ethereum.request({ method: 'eth_sendTransaction', params: [{ from: acct, to: CONTRACT, data: SEL_MINT_PAID, value: VALUE_HEX }] });
+            say('Mint sent! Tx ' + tx + ' — your Rifter lands when the block confirms, and the Paid counter above ticks up within seconds. Track it: https://bscscan.com/tx/' + tx);
+          } catch (e) {
+            say('Mint not completed: ' + ((e && e.message) ? String(e.message).slice(0, 160) : 'unknown error') + ' — no funds moved unless your wallet confirmed a transaction.');
+          }
+          btn.disabled = false;
+        });
       })();
     </script>
   </body>
