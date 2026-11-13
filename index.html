@@ -223,7 +223,7 @@ canvas#shardCanvas{display:block;width:100%;height:auto;touch-action:none;image-
 .mint-panel{margin-top:1.8rem;border:4px solid var(--black);background:var(--panel);padding:clamp(1.3rem,4.5vw,2.4rem);box-shadow:8px 8px 0 var(--cyan-d)}
 .mint-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.8rem}
 .mint-head h3{font-family:var(--font-display);font-size:.85rem;line-height:1.6;margin:0;color:#fff}
-.soon-badge{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-mono);font-size:.76rem;color:#241a02;border:3px solid var(--black);background:var(--gold);padding:.4rem .7rem;box-shadow:3px 3px 0 var(--black)}
+.live-badge{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-mono);font-size:.76rem;color:#241a02;border:3px solid var(--black);background:var(--gold);padding:.4rem .7rem;box-shadow:3px 3px 0 var(--black)}
 .mint-note{color:var(--dim);margin:.9rem 0 0;max-width:46rem}
 .lanes{display:grid;gap:1.2rem;margin-top:1.6rem}
 @media(min-width:760px){.lanes{grid-template-columns:1fr 1fr}}
@@ -376,11 +376,11 @@ footer p{color:var(--faint);font-size:.92rem;margin:.5rem 0 0;max-width:40rem}
         <div class="wrap hero-in">
           <div class="hero-layout">
             <div class="hero-copy">
-              <span class="status-pill"><span class="status-dot"></span> Contract deployed — mint opening soon</span>
+              <span class="status-pill"><span class="status-dot"></span> MINT IS LIVE</span>
               <h1 class="title">RIFTERA</h1>
               <p class="tagline">The sky tore open — and everything on the other side came through. <b>1,111 unique Rifters</b> wait on the other side of the seam. Claim yours with your <b>Binance Agent ID</b>.</p>
               <div class="hero-cta">
-                <a class="btn btn-rift" href="#mint">Mint — opening soon</a>
+                <a class="btn btn-rift" href="#mint">Mint now — live</a>
                 <a class="btn btn-ghost" href="#game">Play Rift Shards</a>
               </div>
               <div class="hero-facts">
@@ -884,9 +884,9 @@ footer p{color:var(--faint);font-size:.92rem;margin:.5rem 0 0;max-width:40rem}
           <div class="mint-panel rv">
             <div class="mint-head">
               <h3>Mint status</h3>
-              <span class="soon-badge">● Contract deployed — mint opening soon</span>
+              <span class="live-badge">● Mint is live</span>
             </div>
-            <p class="mint-note">The contract is <b>deployed and verified on BNB Chain</b> — the owner opens the mint shortly. The official contract address is <b>0x36fE923C449F6163a601058626dEf6c83a8f23AE</b>: <b>any other address claiming to be Riftera is fake.</b></p>
+            <p class="mint-note">The mint is <b>OPEN and running now</b> on BNB Chain — both gates are live in parallel: the <b>Free Gate (0 BNB, max 3 per wallet)</b> and the <b>Rift Gate (0.001 BNB, max 5 per wallet)</b>. The official contract address is <b>0x36fE923C449F6163a601058626dEf6c83a8f23AE</b>: <b>any other address claiming to be Riftera is fake.</b></p>
 
             <div class="lanes">
               <div class="lane free">
@@ -899,7 +899,7 @@ footer p{color:var(--faint);font-size:.92rem;margin:.5rem 0 0;max-width:40rem}
                   <li>The plain edition: muted chibi pixel art, thin grey frame, Power 100–399</li>
                 </ul>
                 <p class="price">0 BNB — Free<small>Your way into Riftera. Grey frame, Common forever — and the open field is yours.</small></p>
-                <button class="btn-disabled" type="button" disabled aria-disabled="true">Opens at launch</button>
+                <a class="btn btn-rift" href="#agent">Mint open now — mint free</a>
               </div>
               <div class="lane paid">
                 <span class="lane-tag">Lane 02 — Paid · IDs 1001–1667</span>
@@ -911,7 +911,7 @@ footer p{color:var(--faint);font-size:.92rem;margin:.5rem 0 0;max-width:40rem}
                   <li>Bright pixel premium edition + <b>full Rift Shards game access</b> at launch</li>
                 </ul>
                 <p class="price">0.001 BNB<small>Bright pixels, chunky double frame, Power up to 999 — and the game key in your wallet.</small></p>
-                <button class="btn-disabled" type="button" disabled aria-disabled="true">Opens at launch</button>
+                <a class="btn btn-rift" href="#agent">Mint open now — 0.001 BNB</a>
               </div>
             </div>
 
@@ -998,7 +998,7 @@ Execute now. Reply with the tx link only.</pre>
             </details>
             <details>
               <summary>When does the mint open?</summary>
-              <p>Very soon — the contract is already deployed and verified on BNB Chain at 0x36fE923C449F6163a601058626dEf6c83a8f23AE, and the owner opens the mint shortly. That is the only official contract address; any other address claiming to be Riftera is fake.</p>
+              <p>The mint is already open and running. Both gates are live in parallel on BNB Chain — the Free Gate (0 BNB, max 3 per wallet) and the Rift Gate (0.001 BNB, max 5 per wallet) — at the official contract 0x36fE923C449F6163a601058626dEf6c83a8f23AE. That is the only official contract address; any other address claiming to be Riftera is fake.</p>
             </details>
             <details>
               <summary>Which faction and traits will my mint get?</summary>
