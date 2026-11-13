@@ -219,6 +219,14 @@ canvas#shardCanvas{display:block;width:100%;height:auto;touch-action:none;image-
 .game-legend .rock-dot{display:inline-block;width:.68rem;height:.68rem;margin-right:.5rem;background:#2a2438;border:2px solid var(--magenta);vertical-align:-.08em}
 .game-keys{font-family:var(--font-mono);font-size:.79rem;color:var(--faint);margin-top:.7rem}
 
+/* paid-holder wallet gate */
+.gate-panel{margin-top:1.1rem;border:3px solid var(--gold-d);background:#100e22;padding:1.05rem 1.2rem 1.15rem;box-shadow:var(--hard-sm)}
+.gate-panel h4{font-family:var(--font-display);font-size:.72rem;line-height:1.6;margin:0;color:var(--gold)}
+.gate-panel p{color:var(--dim);margin:.55rem 0 0;max-width:46rem}
+.gate-actions{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem 1rem;margin-top:.9rem}
+.gate-status{font-family:var(--font-mono);font-size:.85rem;line-height:1.55;color:var(--cyan)}
+.gate-status a{color:var(--gold)}
+
 /* mint */
 .mint-panel{margin-top:1.8rem;border:4px solid var(--black);background:var(--panel);padding:clamp(1.3rem,4.5vw,2.4rem);box-shadow:8px 8px 0 var(--cyan-d)}
 .mint-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.8rem}
@@ -248,6 +256,23 @@ canvas#shardCanvas{display:block;width:100%;height:auto;touch-action:none;image-
 .mint-meta dd{margin:.15rem 0 0;color:var(--ink)}
 .mint-meta dd a{color:var(--cyan);text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere;font-size:.78rem}
 .mint-meta dd a:hover{color:var(--gold)}
+
+/* live supply counter */
+.supply-panel{margin-top:1.4rem;border:3px solid var(--black);background:#0a0918;padding:1rem 1.2rem 1.1rem;box-shadow:var(--hard-sm)}
+.supply-top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.3rem 1rem}
+.supply-label{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--faint)}
+.supply-big{font-family:var(--font-mono);font-size:.95rem;color:var(--dim)}
+.supply-big b{color:var(--gold);font-size:1.3rem;font-weight:600}
+.supply-bar{height:.68rem;background:#17142e;border:2px solid var(--black);margin-top:.6rem}
+.supply-bar i{display:block;height:100%;background:var(--gold);width:0;transition:width .6s steps(12,end)}
+.supply-bar.free i{background:#77839a}
+.supply-bar.paid i{background:var(--violet)}
+.supply-status{font-family:var(--font-mono);font-size:.76rem;color:var(--faint);margin:.55rem 0 0}
+.lane-supply{margin-top:.4rem}
+.lane-supply-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.2rem .8rem;font-family:var(--font-mono);font-size:.82rem;color:var(--dim)}
+.lane-supply-row b{color:var(--ink);font-weight:600}
+.lane-supply-row .lane-rem{color:var(--faint)}
+.lane-supply .supply-bar{margin-top:.45rem}
 
 /* agent */
 .steps{display:grid;gap:1.1rem;margin-top:1.5rem}
@@ -348,6 +373,7 @@ footer p{color:var(--faint);font-size:.92rem;margin:.5rem 0 0;max-width:40rem}
   .status-dot,.hero-feature-card{animation:none}
   .rv{transform:none}.rv.in{transition:none}
   .faction,.nft-card,.btn,.gbtn{transition:none}
+  .supply-bar i{transition:none}
 }
 
     </style>
@@ -706,8 +732,8 @@ footer p{color:var(--faint);font-size:.92rem;margin:.5rem 0 0;max-width:40rem}
             </div>
             <div class="vs-row" role="row">
               <span class="vs-cell vs-label">Rift Shards game</span>
-              <span class="vs-cell">Open play for everyone</span>
-              <span class="vs-cell"><b>Full access</b> unlocks at launch</span>
+              <span class="vs-cell">Locked — paid holders only</span>
+              <span class="vs-cell"><b>Full access</b> — play &amp; compete for the weekly 0.01 BNB pool</span>
             </div>
             <div class="vs-row" role="row">
               <span class="vs-cell vs-label">Agent ID (.ai)</span>
@@ -740,15 +766,24 @@ footer p{color:var(--faint);font-size:.92rem;margin:.5rem 0 0;max-width:40rem}
           <div class="rv">
             <p class="kicker">The Game — Paid Holder Utility</p>
             <h2>Rift Shards</h2>
-            <p class="lede">The rift rains shards over the Shattered Isles — and void rocks with them. Pilot your Rifter, catch the falling shards, dodge what the void throws back. <b>Full game access belongs to Paid Rift Gate holders</b>: at launch, a wallet check unlocks the full game for wallets holding a paid-edition Rifter. Until then, the field is open to everyone — play it right here.</p>
+            <p class="lede">The rift rains shards over the Shattered Isles — and void rocks with them. Pilot your Rifter, catch the falling shards, dodge what the void throws back. <b>Only Paid Rift Gate holders can play</b>: connect the wallet that minted through the Rift Gate, and an on-chain check of its paid mints opens the board. No paid Rifter in the wallet, no run — the field is closed to everyone else.</p>
           </div>
 
           <div class="game-shell rv">
             <div class="game-head">
               <h3>Rift Shards — the Isles run</h3>
-              <span class="mode-badge">● Open play — full access unlocks for paid holders at launch</span>
+              <span class="mode-badge">● Paid holders only</span>
             </div>
-            <p class="game-note">You have <b>60 seconds</b> and <b>3 hearts</b>. Cyan shards score 10, violet 25, gold 50. A void rock costs a heart and 15 points — lose all three hearts and the run ends early. This is the real game board — the launch build adds holder verification on top of it.</p>
+            <p class="game-note">You have <b>60 seconds</b> and <b>3 hearts</b>. Cyan shards score 10, violet 25, gold 50. A void rock costs a heart and 15 points — lose all three hearts and the run ends early. The board stays <b>locked until a connected wallet proves it holds a paid Rifter</b> — connect yours below to play.</p>
+
+            <div class="gate-panel" id="gameGate">
+              <h4>Rift Gate holders only</h4>
+              <p id="gateText">Rift Shards is playable only by wallets that minted through the Rift Gate (paid). Connect your wallet — the game reads <b>paidCountOf</b> from the contract on-chain and opens the board if this wallet holds a paid Rifter. Without a wallet, the game stays locked.</p>
+              <div class="gate-actions">
+                <button class="gbtn primary" id="connectWalletBtn" type="button">Connect wallet to play</button>
+                <span class="gate-status" id="gateStatus" role="status">Locked — no wallet connected.</span>
+              </div>
+            </div>
 
             <div class="hud" aria-live="polite">
               <span>Score <b id="hudScore">0</b></span>
@@ -761,13 +796,13 @@ footer p{color:var(--faint);font-size:.92rem;margin:.5rem 0 0;max-width:40rem}
             <div class="canvas-wrap">
               <canvas id="shardCanvas" width="960" height="540" aria-label="Rift Shards game board: move your Rifter to catch falling shards and dodge void rocks"></canvas>
               <div class="game-overlay" id="gameOverlay">
-                <h4 id="overlayTitle">The rift is raining.</h4>
-                <p id="overlayText">Catch the shards. Dodge the void rocks. Press Start — or hit Space — when you are ready.</p>
+                <h4 id="overlayTitle">Locked — paid holders only.</h4>
+                <p id="overlayText">Connect the wallet that minted through the Rift Gate (paid). If it holds a paid Rifter, the board opens.</p>
               </div>
             </div>
 
             <div class="game-controls">
-              <button class="gbtn primary" id="gameStartBtn" type="button">Start run</button>
+              <button class="gbtn primary" id="gameStartBtn" type="button" disabled>Start run</button>
               <button class="gbtn" id="gamePauseBtn" type="button" disabled>Pause</button>
               <button class="gbtn" id="gameRestartBtn" type="button" disabled>Restart</button>
             </div>
@@ -814,7 +849,7 @@ footer p{color:var(--faint);font-size:.92rem;margin:.5rem 0 0;max-width:40rem}
           <div class="rv">
             <p class="kicker">Rift Shards — Weekly Prize Pool</p>
             <h2>Top the board.<br />Take home BNB.</h2>
-            <p class="lede">Every week, the three highest Rift Shards scores split a <b>0.01 BNB prize pool</b>. Seasons run Monday to Monday and the board wipes clean at every reset. The prizes are paid <b>by hand, by the dev</b> — no smart contract holds your winnings; a person sends them.</p>
+            <p class="lede">Every week, the three highest Rift Shards scores split a <b>0.01 BNB prize pool</b>. Seasons run Monday to Monday and the board wipes clean at every reset. The board belongs to <b>paid players only</b> — Rift Shards is locked to Rift Gate (paid) holders, so every seat on it is earned by a paid wallet. The prizes are paid <b>by hand, by the dev</b> — no smart contract holds your winnings; a person sends them.</p>
           </div>
 
           <div class="prize-grid">
@@ -864,7 +899,7 @@ footer p{color:var(--faint);font-size:.92rem;margin:.5rem 0 0;max-width:40rem}
             <h3>How the prizes work</h3>
             <ul>
               <li><b>Weekly seasons.</b> Each season opens Monday 00:00 UTC and closes the next Monday 00:00 UTC, when the board resets to zero and a new season starts.</li>
-              <li><b>Save your run.</b> When a run ends, save your score with your name — and add your BNB wallet address. Scores are welcome without one, but only runs saved with a wallet can win a prize.</li>
+              <li><b>Paid players only.</b> Rift Shards is locked to wallets that minted through the Rift Gate (paid) — only they can play, and only they can take a seat on the board. When a run ends, save your score with your name — and add your BNB wallet address. Scores are welcome without one, but only runs saved with a wallet can win a prize.</li>
               <li><b>Paid by the dev, within 24 hours.</b> When a season closes, the dev sends the prizes manually — 0.005 / 0.003 / 0.002 BNB — to the wallet address saved with each winning run, within 24 hours of the season ending.</li>
               <li><b>Wallets stay private.</b> Your address is never displayed on the board or anywhere public. It has exactly one job: receiving your prize.</li>
             </ul>
@@ -888,6 +923,15 @@ footer p{color:var(--faint);font-size:.92rem;margin:.5rem 0 0;max-width:40rem}
             </div>
             <p class="mint-note">The mint is <b>OPEN and running now</b> on BNB Chain — both gates are live in parallel: the <b>Free Gate (0 BNB, max 3 per wallet)</b> and the <b>Rift Gate (0.001 BNB, max 5 per wallet)</b>. The official contract address is <b>0x36fE923C449F6163a601058626dEf6c83a8f23AE</b>: <b>any other address claiming to be Riftera is fake.</b></p>
 
+            <div class="supply-panel">
+              <div class="supply-top">
+                <span class="supply-label">Total minted — live from the contract</span>
+                <span class="supply-big"><b id="supTotal">84</b> / 1.111 · <b id="supTotalRem">1.027</b> remaining</span>
+              </div>
+              <div class="supply-bar"><i id="supBar" style="width:7.6%"></i></div>
+              <p class="supply-status" id="supplyStatus">Live supply — read straight from the Riftera contract on BNB Chain. No wallet needed.</p>
+            </div>
+
             <div class="lanes">
               <div class="lane free">
                 <span class="lane-tag">Lane 01 — Free · IDs 1–444</span>
@@ -898,7 +942,11 @@ footer p{color:var(--faint);font-size:.92rem;margin:.5rem 0 0;max-width:40rem}
                   <li>Requires a <b>Binance Agent ID (.ai)</b> NFT in the minting wallet</li>
                   <li>The plain edition: muted chibi pixel art, thin grey frame, Power 100–399</li>
                 </ul>
-                <p class="price">0 BNB — Free<small>Your way into Riftera. Grey frame, Common forever — and the open field is yours.</small></p>
+                <div class="lane-supply">
+                  <div class="lane-supply-row"><span>Minted <b id="supFree">84</b> of 444</span><span class="lane-rem"><b id="supFreeRem">360</b> remaining</span></div>
+                  <div class="supply-bar free"><i id="supFreeBar" style="width:18.9%"></i></div>
+                </div>
+                <p class="price">0 BNB — Free<small>Your way into Riftera. Grey frame, Common forever — Rift Shards stays locked; the game belongs to paid holders.</small></p>
                 <a class="btn btn-rift" href="#agent">Mint open now — mint free</a>
               </div>
               <div class="lane paid">
@@ -908,8 +956,12 @@ footer p{color:var(--faint);font-size:.92rem;margin:.5rem 0 0;max-width:40rem}
                   <li><b>667 Rifters</b> at exactly <b>0.001 BNB</b> each</li>
                   <li><b>Max 5 per wallet</b> — open in parallel with the free lane from day one</li>
                   <li>The <b>only</b> lane that can pull <b>Rare (167)</b> and <b>Legendary (33)</b></li>
-                  <li>Bright pixel premium edition + <b>full Rift Shards game access</b> at launch</li>
+                  <li>Bright pixel premium edition + <b>full Rift Shards game access</b> — paid holders only</li>
                 </ul>
+                <div class="lane-supply">
+                  <div class="lane-supply-row"><span>Minted <b id="supPaid">0</b> of 667</span><span class="lane-rem"><b id="supPaidRem">667</b> remaining</span></div>
+                  <div class="supply-bar paid"><i id="supPaidBar" style="width:0%"></i></div>
+                </div>
                 <p class="price">0.001 BNB<small>Bright pixels, chunky double frame, Power up to 999 — and the game key in your wallet.</small></p>
                 <a class="btn btn-rift" href="#agent">Mint open now — 0.001 BNB</a>
               </div>
@@ -994,7 +1046,7 @@ Execute now. Reply with the tx link only.</pre>
             </details>
             <details>
               <summary>What does a Rifter actually do?</summary>
-              <p>Your Rifter is your identity in the world — faction, realm, rune, aura and power, minted on-chain — and your key to the game. Paid-edition holders get full access to Rift Shards at launch through a wallet check; free-edition holders and visitors play the open field.</p>
+              <p>Your Rifter is your identity in the world — faction, realm, rune, aura and power, minted on-chain — and your key to the game. Rift Shards is for paid-edition holders only: connect the wallet that minted through the Rift Gate and an on-chain paidCountOf check unlocks the board. Free-edition holders and visitors can't enter the game.</p>
             </details>
             <details>
               <summary>When does the mint open?</summary>
@@ -1072,8 +1124,8 @@ Execute now. Reply with the tx link only.</pre>
       })();
 
       // ---------- RIFT SHARDS ----------
-      // Open-play build of the paid-holder game. At launch a wallet check gates
-      // full access for Rift Gate (paid) holders; the board itself is real.
+      // Paid-holder game: the board stays locked until a connected wallet
+      // proves on-chain (paidCountOf > 0) that it minted through the Rift Gate.
       (function () {
         var canvas = document.getElementById('shardCanvas');
         if (!canvas || !canvas.getContext) return;
@@ -1104,6 +1156,7 @@ Execute now. Reply with the tx link only.</pre>
         var savedThisRun = false;
 
         var state = 'idle'; // idle | running | paused | over
+        var unlocked = false; // paid-holder gate — set true only by the on-chain wallet check
         var raf = 0, last = 0, elapsed = 0, best = 0;
         var score = 0, hearts = 3, caught = 0;
         var items = [], pops = [], stars = [];
@@ -1185,6 +1238,7 @@ Execute now. Reply with the tx link only.</pre>
         function hideOverlay() { overlay.classList.add('hidden'); }
 
         function startGame() {
+          if (!unlocked) return; // locked — paid holders only
           reset();
           if (savePanel) savePanel.classList.add('hidden');
           state = 'running';
@@ -1542,6 +1596,113 @@ Execute now. Reply with the tx link only.</pre>
         }
         renderBoard();
 
+        // ---------- PAID-HOLDER WALLET GATE ----------
+        // The board is locked until a connected wallet proves it minted
+        // through the Rift Gate: paidCountOf(address) is read from the
+        // Riftera contract via eth_call (selector 0x3362d20c) against the
+        // public BNB Chain RPC. Count > 0 unlocks play, controls and saving.
+        var gateText = document.getElementById('gateText');
+        var gateBtn = document.getElementById('connectWalletBtn');
+        var gateStatus = document.getElementById('gateStatus');
+        var RIFT_CONTRACT = '0x36fE923C449F6163a601058626dEf6c83a8f23AE';
+        var BSC_RPC = 'https://bsc-dataseed.binance.org';
+        var PAID_COUNT_SEL = '0x3362d20c';
+
+        function shortAddr(a) { return a.slice(0, 6) + '…' + a.slice(-4); }
+
+        function lockGame(msg) {
+          unlocked = false;
+          startBtn.disabled = true;
+          pauseBtn.disabled = true;
+          restartBtn.disabled = true;
+          if (state === 'idle' || state === 'over') {
+            showOverlay('Locked — paid holders only.', 'Connect the wallet that minted through the Rift Gate (paid). If it holds a paid Rifter, the board opens.');
+          }
+          if (gateBtn) gateBtn.textContent = 'Connect wallet to play';
+          if (msg && gateStatus) gateStatus.textContent = msg;
+        }
+
+        function unlockGame(addr, count) {
+          unlocked = true;
+          startBtn.disabled = false;
+          startBtn.textContent = 'Start run';
+          if (gateText) {
+            gateText.textContent = 'Connected: ' + shortAddr(addr) + ' — ' + count + ' paid Rifter' + (count === 1 ? '' : 's') + ' found on-chain. The board is open: play, and save your run to take a seat on this week’s prize board.';
+          }
+          if (gateStatus) gateStatus.textContent = 'Game unlocked — press Start run.';
+          if (gateBtn) gateBtn.textContent = 'Re-check wallet';
+          if (state === 'idle' || state === 'over') {
+            showOverlay('The rift is raining.', 'Catch the shards. Dodge the void rocks. Press Start — or hit Space — when you are ready.');
+          }
+        }
+
+        function readPaidCount(addr) {
+          var clean = addr.replace(/^0x/i, '').toLowerCase();
+          var data = PAID_COUNT_SEL + ('0000000000000000000000000000000000000000000000000000000000000000' + clean).slice(-64);
+          return fetch(BSC_RPC, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              jsonrpc: '2.0', id: 1, method: 'eth_call',
+              params: [{ to: RIFT_CONTRACT, data: data }, 'latest']
+            })
+          }).then(function (r) {
+            if (!r.ok) throw new Error('RPC ' + r.status);
+            return r.json();
+          }).then(function (j) {
+            if (!j || typeof j.result !== 'string') throw new Error('Bad RPC reply');
+            var v = parseInt(j.result, 16);
+            if (isNaN(v)) throw new Error('Bad RPC value');
+            return v;
+          });
+        }
+
+        function checkWallet(addr) {
+          if (gateStatus) gateStatus.textContent = 'Wallet connected — checking paidCountOf on-chain…';
+          readPaidCount(addr).then(function (count) {
+            if (count > 0) {
+              unlockGame(addr, count);
+            } else {
+              lockGame('');
+              if (gateStatus) {
+                gateStatus.innerHTML = 'No paid Rifter in this wallet — the game is for Rift Gate (paid) holders only. <a href="#mint">See the Mint</a> · <a href="#agent">Mint with your agent</a>';
+              }
+            }
+          }).catch(function () {
+            lockGame('');
+            if (gateStatus) gateStatus.textContent = 'Couldn’t read the contract just now — check your connection and press Connect again.';
+          });
+        }
+
+        if (gateBtn) {
+          gateBtn.addEventListener('click', function () {
+            if (!window.ethereum) {
+              if (gateStatus) gateStatus.textContent = 'No wallet found in this browser. Open Riftera in a wallet browser (Binance Wallet, MetaMask…) to connect — without a wallet, the game stays locked.';
+              return;
+            }
+            if (gateStatus) gateStatus.textContent = 'Connecting…';
+            window.ethereum.request({ method: 'eth_requestAccounts' }).then(function (accounts) {
+              if (!accounts || !accounts.length) {
+                if (gateStatus) gateStatus.textContent = 'No account shared — the game stays locked.';
+                return;
+              }
+              checkWallet(accounts[0]);
+            }).catch(function () {
+              if (gateStatus) gateStatus.textContent = 'Connection rejected — the game stays locked until a wallet connects.';
+            });
+          });
+          if (window.ethereum && window.ethereum.on) {
+            window.ethereum.on('accountsChanged', function (accounts) {
+              if (!accounts || !accounts.length) {
+                lockGame('Wallet disconnected — the game is locked.');
+              } else {
+                checkWallet(accounts[0]);
+              }
+            });
+          }
+        }
+        lockGame('Locked — no wallet connected.');
+
         // paint the idle board
         reset();
         draw(performance.now());
@@ -1580,6 +1741,90 @@ Execute now. Reply with the tx link only.</pre>
         setLabel();
         tick();
         setInterval(tick, 1000);
+      })();
+    </script>
+
+    <script>
+      // ---------- LIVE SUPPLY COUNTER ----------
+      // Reads freeMinted(), paidMinted() and totalMinted() straight from the
+      // Riftera contract on BNB Chain via eth_call against a public RPC —
+      // no wallet connection needed. Refreshes on load and every 30 seconds.
+      // If the RPC is unreachable, the last numbers read stay on screen.
+      (function () {
+        var CONTRACT = '0x36fE923C449F6163a601058626dEf6c83a8f23AE';
+        var RPC = 'https://bsc-dataseed.binance.org';
+        var FREE_MAX = 444, PAID_MAX = 667, TOTAL_MAX = 1111;
+        var SEL = { free: '0xd10a1a2b', paid: '0x2806b8fb', total: '0xa2309ff8' };
+        var el = {
+          total: document.getElementById('supTotal'),
+          totalRem: document.getElementById('supTotalRem'),
+          bar: document.getElementById('supBar'),
+          free: document.getElementById('supFree'),
+          freeRem: document.getElementById('supFreeRem'),
+          freeBar: document.getElementById('supFreeBar'),
+          paid: document.getElementById('supPaid'),
+          paidRem: document.getElementById('supPaidRem'),
+          paidBar: document.getElementById('supPaidBar'),
+          status: document.getElementById('supplyStatus')
+        };
+        if (!el.total || !el.free || !el.paid) return;
+
+        function fmt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.'); }
+        function clamp(n, max) { return Math.max(0, Math.min(max, n)); }
+
+        function call(sel) {
+          return fetch(RPC, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              jsonrpc: '2.0', id: 1, method: 'eth_call',
+              params: [{ to: CONTRACT, data: sel }, 'latest']
+            })
+          }).then(function (r) {
+            if (!r.ok) throw new Error('RPC ' + r.status);
+            return r.json();
+          }).then(function (j) {
+            if (!j || typeof j.result !== 'string') throw new Error('Bad RPC reply');
+            var v = parseInt(j.result, 16);
+            if (isNaN(v)) throw new Error('Bad RPC value');
+            return v;
+          });
+        }
+
+        function render(free, paid, total) {
+          free = clamp(free, FREE_MAX);
+          paid = clamp(paid, PAID_MAX);
+          total = clamp(total, TOTAL_MAX);
+          el.total.textContent = fmt(total);
+          el.totalRem.textContent = fmt(TOTAL_MAX - total);
+          el.bar.style.width = (total / TOTAL_MAX * 100).toFixed(1) + '%';
+          el.free.textContent = fmt(free);
+          el.freeRem.textContent = fmt(FREE_MAX - free);
+          el.freeBar.style.width = (free / FREE_MAX * 100).toFixed(1) + '%';
+          el.paid.textContent = fmt(paid);
+          el.paidRem.textContent = fmt(PAID_MAX - paid);
+          el.paidBar.style.width = (paid / PAID_MAX * 100).toFixed(1) + '%';
+        }
+
+        function refresh() {
+          Promise.all([call(SEL.free), call(SEL.paid), call(SEL.total)])
+            .then(function (v) {
+              render(v[0], v[1], v[2]);
+              if (el.status) {
+                var t = new Date().toLocaleTimeString([], { hour12: false });
+                el.status.textContent = 'Live from BNB Chain · updated ' + t + ' · refreshes every 30s';
+              }
+            })
+            .catch(function () {
+              // Keep the last numbers on screen — never invent new ones.
+              if (el.status) {
+                el.status.textContent = 'Couldn’t reach the BNB Chain RPC just now — showing the last count read from the contract. Retrying every 30s.';
+              }
+            });
+        }
+
+        refresh();
+        setInterval(refresh, 30000);
       })();
     </script>
   </body>
