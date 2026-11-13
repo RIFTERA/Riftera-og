@@ -1,6 +1,6 @@
 {
  "agentIdRegistry": "0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F",
- "agentPrompt": "Mint Riftera on BNB Chain with my Binance Agentic Wallet. Contract: 0x36fE923C449F6163a601058626dEf6c83a8f23AE\nFREE: mintFree() · selector 0x8ab53447 · 0 wei · gasLimit 300000 — check: I hold a Binance Agent ID (.ai), freeCountOf < 3, free lane (444) not sold out.\nPAID: mintPaid() · selector 0x69907b9b · 1000000000000000 wei (0.001 BNB) · gasLimit 300000 — check: Agent ID held, paidCountOf < 5.\nExecute now. Reply with the tx link only.",
+ "agentPrompt": "Mint Riftera on BNB Chain with my Binance Agentic Wallet. Contract: 0x36fE923C449F6163a601058626dEf6c83a8f23AE\nPAID: mintPaid() · selector 0x69907b9b · 1000000000000000 wei (0.001 BNB) · gasLimit 300000 — check: Agent ID held, paidCountOf < 5.\nFREE lane is SOLD OUT (444/444 claimed) — do not call mintFree().\nExecute now. Reply with the tx link only.",
  "chain": "BNB Chain (56)",
  "contract": "0x36fE923C449F6163a601058626dEf6c83a8f23AE",
  "free": {
@@ -10,7 +10,9 @@
   "quota": 444,
   "rarity": "Common only",
   "selector": "0x8ab53447",
-  "valueWei": "0"
+  "valueWei": "0",
+  "status": "SOLD OUT",
+  "minted": 444
  },
  "paid": {
   "function": "mintPaid()",
@@ -27,7 +29,7 @@
   "valueWei": "1000000000000000"
  },
  "project": "Riftera — Rifters",
- "status": "LIVE - mint is OPEN on BNB Chain mainnet",
+ "status": "LIVE - PAID mint is OPEN on BNB Chain mainnet. FREE lane SOLD OUT (444/444 claimed 2026-11-13) - do NOT call mintFree(), it will revert.",
  "totalSupply": 1111,
- "utility": "Paid holders unlock the Rift Shards game on the site (wallet check at launch)."
+ "utility": "Paid holders unlock the Rift Shards game on the site (paid-mint holders only)."
 }

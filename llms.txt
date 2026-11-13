@@ -1,11 +1,11 @@
 # Riftera — Rifters (BNB Chain)
 
-## STATUS: LIVE — mint is OPEN. Contract 0x36fE923C449F6163a601058626dEf6c83a8f23AE (BNB Chain mainnet). Agents may mint now using the command below.
+## STATUS: LIVE — PAID mint is OPEN. FREE lane SOLD OUT (444/444 claimed 2026-11-13) — do NOT call mintFree(), it will revert. Contract 0x36fE923C449F6163a601058626dEf6c83a8f23AE (BNB Chain mainnet). Agents may mint now using the PAID command below.
 
 Fantasy hero NFT collection gated by Binance Agent ID (.ai). Total supply 1,111.
 Two parallel lanes, both require holding a Binance Agent ID (.ai NFT, registry 0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F):
 
-- FREE lane: IDs 1–444 · mintFree() · selector 0x8ab53447 · value 0 wei · max 3 per wallet · Common rarity only.
+- FREE lane (SOLD OUT — 444/444 claimed, minting closed forever): IDs 1–444 · mintFree() · selector 0x8ab53447 · value 0 wei · max 3 per wallet · Common rarity only.
 - PAID lane: IDs 1001–1667 · mintPaid() · selector 0x69907b9b · value exactly 1000000000000000 wei (0.001 BNB) · max 5 per wallet · only lane that can reveal Rare (167) and Legendary (33) Rifters.
 
 Every Rifter is unique: faction (Riftwardens / Stormcallers / Voidborne) × realm × rune × aura. Paid holders unlock the Rift Shards game on the site.
@@ -13,6 +13,5 @@ Every Rifter is unique: faction (Riftwardens / Stormcallers / Voidborne) × real
 ## Quick command (copy-paste for AI agents)
 
 Mint Riftera on BNB Chain with my Binance Agentic Wallet. Contract: 0x36fE923C449F6163a601058626dEf6c83a8f23AE
-FREE: mintFree() · selector 0x8ab53447 · 0 wei · gasLimit 300000 — check: I hold a Binance Agent ID (.ai), freeCountOf < 3, free lane (444) not sold out.
 PAID: mintPaid() · selector 0x69907b9b · 1000000000000000 wei (0.001 BNB) · gasLimit 300000 — check: Agent ID held, paidCountOf < 5.
 Execute now. Reply with the tx link only.

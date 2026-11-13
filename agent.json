@@ -1,5 +1,5 @@
 {
- "description": "Fantasy game-world NFT collection on BNB Chain: 1,111 unique chibi-pixel Rifters across three factions (Riftwardens, Stormcallers, Voidborne), gated by Binance Agent ID (.ai). Two parallel lanes, both requiring a Binance Agent ID: a FREE lane (IDs 1-444, mintFree(), 0 BNB, max 3 per wallet, Common only) and a PAID lane (IDs 1001-1667, mintPaid(), exactly 0.001 BNB, max 5 per wallet, the only lane that can reveal Rare (167) and Legendary (33) Rifters). Paid holders unlock the Rift Shards game on the site, whose weekly leaderboard pays a 0.01 BNB prize pool to the top 3 players. Status: LIVE - the mint is OPEN on BNB Chain mainnet. Machine-readable spec: llms.txt and mint.json on the official site.",
+ "description": "Fantasy game-world NFT collection on BNB Chain: 1,111 unique chibi-pixel Rifters across three factions (Riftwardens, Stormcallers, Voidborne), gated by Binance Agent ID (.ai). Two parallel lanes, both requiring a Binance Agent ID: a FREE lane (IDs 1-444, mintFree(), 0 BNB, max 3 per wallet, Common only) that SOLD OUT on 2026-11-13 (444/444 claimed) and a PAID lane (IDs 1001-1667, mintPaid(), exactly 0.001 BNB, max 5 per wallet, the only lane that can reveal Rare (167) and Legendary (33) Rifters). Paid holders unlock the Rift Shards game on the site, whose weekly leaderboard pays a 0.01 BNB prize pool to the top 3 players. Status: LIVE - the PAID mint is OPEN on BNB Chain mainnet; the free lane is SOLD OUT, do not call mintFree(). Machine-readable spec: llms.txt and mint.json on the official site.",
  "image": "https://riftera.net/nft/images/og.png",
  "name": "Riftera",
  "properties": {
@@ -10,7 +10,7 @@
   },
   "network": "BNB Chain (BSC mainnet)",
   "officialSite": "https://riftera.net",
-  "status": "LIVE - mint is OPEN",
+  "status": "LIVE - paid mint OPEN, free lane SOLD OUT (444/444)",
   "x": "@RifteraPixel"
  },
  "registrations": [],
