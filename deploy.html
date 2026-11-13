@@ -24,8 +24,10 @@ code{word-break:break-all;color:#67e8f9} .ok{color:#7CFC98} .warn{color:#f5c542}
 <p id="deployLine"><small>Contract address will appear here.</small></p></div>
 
 <div class="card"><h3>Step 03 — Open the mint (owner only)</h3>
-<button id="btnOpen" disabled>Open mint</button>
-<p><small>Mint starts CLOSED by design. Open only after the site is wired to the deployed address.</small></p>
+<label><small>Contract address (already deployed)</small></label>
+<input id="openAddr" value="0x36fE923C449F6163a601058626dEf6c83a8f23AE">
+<button id="btnOpen">Open mint</button>
+<p><small>Mint starts CLOSED by design. The address above is the deployed Riftera contract — connect the owner wallet on BSC (Step 01), then press Open mint any time.</small></p>
 <p id="openLine"></p></div>
 
 <div class="card"><h3>Reference</h3>
@@ -68,7 +70,10 @@ $("btnDeploy").onclick = async () => {
 };
 $("btnOpen").onclick = async () => {
   try {
-    const c = new ethers.Contract(deployed, ABI, signer);
+    if (!signer) { $("openLine").textContent = "Connect the owner wallet first (Step 01)."; return; }
+    await needChain();
+    const target = ($("openAddr").value || "").trim() || deployed;
+    const c = new ethers.Contract(target, ABI, signer);
     const tx = await c.setMintOpen(true);
     await tx.wait();
     $("openLine").innerHTML = "<span class='ok'>Mint is OPEN.</span> Tx: <code>" + tx.hash + "</code>";
