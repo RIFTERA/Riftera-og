@@ -268,6 +268,7 @@ canvas#shardCanvas{display:block;width:100%;height:auto;touch-action:none;image-
 .supply-bar.free i{background:#77839a}
 .supply-bar.paid i{background:var(--violet)}
 .supply-status{font-family:var(--font-mono);font-size:.76rem;color:var(--faint);margin:.55rem 0 0}
+.supply-updated{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.04em;color:var(--dim);margin:.35rem 0 0}
 .lane-supply{margin-top:.4rem}
 .lane-supply-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.2rem .8rem;font-family:var(--font-mono);font-size:.82rem;color:var(--dim)}
 .lane-supply-row b{color:var(--ink);font-weight:600}
@@ -926,10 +927,11 @@ footer p{color:var(--faint);font-size:.92rem;margin:.5rem 0 0;max-width:40rem}
             <div class="supply-panel">
               <div class="supply-top">
                 <span class="supply-label">Total minted — live from the contract</span>
-                <span class="supply-big"><b id="supTotal">84</b> / 1.111 · <b id="supTotalRem">1.027</b> remaining</span>
+                <span class="supply-big"><b id="supTotal">…</b> / 1.111 · <b id="supTotalRem">…</b> remaining</span>
               </div>
-              <div class="supply-bar"><i id="supBar" style="width:7.6%"></i></div>
-              <p class="supply-status" id="supplyStatus">Live supply — read straight from the Riftera contract on BNB Chain. No wallet needed.</p>
+              <div class="supply-bar"><i id="supBar" style="width:0%"></i></div>
+              <p class="supply-status" id="supplyStatus">Reading the live count straight from the Riftera contract on BNB Chain…</p>
+              <p class="supply-updated" id="supplyUpdated" hidden></p>
             </div>
 
             <div class="lanes">
@@ -943,8 +945,8 @@ footer p{color:var(--faint);font-size:.92rem;margin:.5rem 0 0;max-width:40rem}
                   <li>The plain edition: muted chibi pixel art, thin grey frame, Power 100–399</li>
                 </ul>
                 <div class="lane-supply">
-                  <div class="lane-supply-row"><span>Minted <b id="supFree">84</b> of 444</span><span class="lane-rem"><b id="supFreeRem">360</b> remaining</span></div>
-                  <div class="supply-bar free"><i id="supFreeBar" style="width:18.9%"></i></div>
+                  <div class="lane-supply-row"><span>Minted <b id="supFree">…</b> of 444</span><span class="lane-rem"><b id="supFreeRem">…</b> remaining</span></div>
+                  <div class="supply-bar free"><i id="supFreeBar" style="width:0%"></i></div>
                 </div>
                 <p class="price">0 BNB — Free<small>Your way into Riftera. Grey frame, Common forever — Rift Shards stays locked; the game belongs to paid holders.</small></p>
                 <a class="btn btn-rift" href="#agent">Mint open now — mint free</a>
@@ -959,7 +961,7 @@ footer p{color:var(--faint);font-size:.92rem;margin:.5rem 0 0;max-width:40rem}
                   <li>Bright pixel premium edition + <b>full Rift Shards game access</b> — paid holders only</li>
                 </ul>
                 <div class="lane-supply">
-                  <div class="lane-supply-row"><span>Minted <b id="supPaid">0</b> of 667</span><span class="lane-rem"><b id="supPaidRem">667</b> remaining</span></div>
+                  <div class="lane-supply-row"><span>Minted <b id="supPaid">…</b> of 667</span><span class="lane-rem"><b id="supPaidRem">…</b> remaining</span></div>
                   <div class="supply-bar paid"><i id="supPaidBar" style="width:0%"></i></div>
                 </div>
                 <p class="price">0.001 BNB<small>Bright pixels, chunky double frame, Power up to 999 — and the game key in your wallet.</small></p>
@@ -1747,14 +1749,28 @@ Execute now. Reply with the tx link only.</pre>
     <script>
       // ---------- LIVE SUPPLY COUNTER ----------
       // Reads freeMinted(), paidMinted() and totalMinted() straight from the
-      // Riftera contract on BNB Chain via eth_call against a public RPC —
-      // no wallet connection needed. Refreshes on load and every 30 seconds.
-      // If the RPC is unreachable, the last numbers read stay on screen.
+      // Riftera contract on BNB Chain — no wallet connection needed. THREE
+      // public BSC RPC endpoints are queried in parallel on every refresh
+      // and the answer with the LARGEST totalMinted wins: the freshest node
+      // speaks. The winning node's eth_blockNumber is shown next to the read
+      // time ("Updated HH:MM:SS · Block #N") so freshness is provable.
+      // Refreshes on load, every 10 seconds, and immediately whenever the
+      // page regains focus or becomes visible again. Until the first
+      // successful read the counters show "…" — the numbers baked into this
+      // page are only a last-resort fallback if EVERY RPC fails, and are
+      // then labelled as a snapshot, never presented as the live count.
       (function () {
         var CONTRACT = '0x36fE923C449F6163a601058626dEf6c83a8f23AE';
-        var RPC = 'https://bsc-dataseed.binance.org';
+        var RPCS = [
+          'https://bsc-dataseed.binance.org',
+          'https://bsc-dataseed1.defibit.io',
+          'https://bsc-dataseed1.ninicoin.io'
+        ];
         var FREE_MAX = 444, PAID_MAX = 667, TOTAL_MAX = 1111;
         var SEL = { free: '0xd10a1a2b', paid: '0x2806b8fb', total: '0xa2309ff8' };
+        // Last-resort snapshot baked into the page. Shown ONLY if every RPC
+        // fails before any live read has succeeded — always labelled.
+        var SNAPSHOT = { free: 84, paid: 0, total: 84 };
         var el = {
           total: document.getElementById('supTotal'),
           totalRem: document.getElementById('supTotalRem'),
@@ -1765,21 +1781,19 @@ Execute now. Reply with the tx link only.</pre>
           paid: document.getElementById('supPaid'),
           paidRem: document.getElementById('supPaidRem'),
           paidBar: document.getElementById('supPaidBar'),
-          status: document.getElementById('supplyStatus')
+          status: document.getElementById('supplyStatus'),
+          updated: document.getElementById('supplyUpdated')
         };
         if (!el.total || !el.free || !el.paid) return;
 
         function fmt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.'); }
         function clamp(n, max) { return Math.max(0, Math.min(max, n)); }
 
-        function call(sel) {
-          return fetch(RPC, {
+        function rpc(rpcUrl, method, params) {
+          return fetch(rpcUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              jsonrpc: '2.0', id: 1, method: 'eth_call',
-              params: [{ to: CONTRACT, data: sel }, 'latest']
-            })
+            body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: method, params: params })
           }).then(function (r) {
             if (!r.ok) throw new Error('RPC ' + r.status);
             return r.json();
@@ -1788,6 +1802,22 @@ Execute now. Reply with the tx link only.</pre>
             var v = parseInt(j.result, 16);
             if (isNaN(v)) throw new Error('Bad RPC value');
             return v;
+          });
+        }
+
+        function call(rpcUrl, sel) {
+          return rpc(rpcUrl, 'eth_call', [{ to: CONTRACT, data: sel }, 'latest']);
+        }
+
+        // One endpoint's full answer: all three counters + its block height.
+        function readNode(rpcUrl) {
+          return Promise.all([
+            call(rpcUrl, SEL.free),
+            call(rpcUrl, SEL.paid),
+            call(rpcUrl, SEL.total),
+            rpc(rpcUrl, 'eth_blockNumber', [])
+          ]).then(function (v) {
+            return { free: v[0], paid: v[1], total: v[2], block: v[3] };
           });
         }
 
@@ -1806,25 +1836,61 @@ Execute now. Reply with the tx link only.</pre>
           el.paidBar.style.width = (paid / PAID_MAX * 100).toFixed(1) + '%';
         }
 
+        var lastGood = null; // last winning read: {free, paid, total, block}
+        var inFlight = false;
+
         function refresh() {
-          Promise.all([call(SEL.free), call(SEL.paid), call(SEL.total)])
-            .then(function (v) {
-              render(v[0], v[1], v[2]);
-              if (el.status) {
+          if (inFlight) return;
+          inFlight = true;
+          // All three endpoints in parallel; a failed node counts as null.
+          Promise.all(RPCS.map(function (u) {
+            return readNode(u).then(function (v) { return v; }, function () { return null; });
+          })).then(function (results) {
+            inFlight = false;
+            var best = null;
+            for (var i = 0; i < results.length; i++) {
+              var r = results[i];
+              if (r && (!best || r.total > best.total)) best = r;
+            }
+            if (best) {
+              lastGood = best;
+              render(best.free, best.paid, best.total);
+              if (el.updated) {
                 var t = new Date().toLocaleTimeString([], { hour12: false });
-                el.status.textContent = 'Live from BNB Chain · updated ' + t + ' · refreshes every 30s';
+                el.updated.hidden = false;
+                el.updated.textContent = 'Updated ' + t + ' · Block #' + fmt(best.block);
               }
-            })
-            .catch(function () {
-              // Keep the last numbers on screen — never invent new ones.
               if (el.status) {
-                el.status.textContent = 'Couldn’t reach the BNB Chain RPC just now — showing the last count read from the contract. Retrying every 30s.';
+                el.status.textContent = 'Live from BNB Chain — the freshest of three public nodes wins every read, refreshed every 10 seconds. No wallet needed.';
               }
-            });
+            } else if (lastGood) {
+              // Every RPC failed this round: keep the last live numbers. The
+              // Updated line still shows when they were actually read, so
+              // staleness stays visible instead of being hidden.
+              if (el.status) {
+                el.status.textContent = 'Couldn’t reach any BNB Chain RPC just now — showing the last live count; its read time and block are below. Retrying every 10s.';
+              }
+            } else {
+              // No live read has ever succeeded: fall back to the snapshot
+              // baked into the page, clearly labelled — never as live.
+              render(SNAPSHOT.free, SNAPSHOT.paid, SNAPSHOT.total);
+              if (el.updated) {
+                el.updated.hidden = false;
+                el.updated.textContent = 'Not live — showing the last count recorded in this page (snapshot); no RPC has answered yet. Retrying every 10s.';
+              }
+              if (el.status) {
+                el.status.textContent = 'Couldn’t reach any BNB Chain RPC yet — the numbers above are a page snapshot, not a live read.';
+              }
+            }
+          });
         }
 
         refresh();
-        setInterval(refresh, 30000);
+        setInterval(refresh, 10000);
+        document.addEventListener('visibilitychange', function () {
+          if (!document.hidden) refresh();
+        });
+        window.addEventListener('focus', refresh);
       })();
     </script>
   </body>
