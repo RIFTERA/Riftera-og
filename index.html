@@ -195,7 +195,7 @@ h2{font-family:var(--font-display);font-weight:400;font-size:clamp(1.02rem,3.8vw
 .game-shell{margin-top:1.7rem;border:4px solid var(--black);background:var(--panel);padding:clamp(1.1rem,3.5vw,1.9rem);box-shadow:8px 8px 0 var(--violet-d)}
 .game-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.8rem}
 .game-head h3{font-family:var(--font-display);font-size:.85rem;line-height:1.6;margin:0;color:#fff}
-.demo-badge{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-mono);font-size:.74rem;color:#062a2e;border:3px solid var(--black);background:var(--cyan);padding:.4rem .7rem;box-shadow:3px 3px 0 var(--black)}
+.mode-badge{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-mono);font-size:.74rem;color:#062a2e;border:3px solid var(--black);background:var(--cyan);padding:.4rem .7rem;box-shadow:3px 3px 0 var(--black)}
 .game-note{color:var(--dim);margin:.9rem 0 0;max-width:48rem}
 .game-note b{color:var(--ink)}
 .hud{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;margin-top:1.1rem;font-family:var(--font-mono);font-size:.86rem;color:var(--dim);background:#0a0918;border:3px solid var(--black);padding:.6rem .8rem}
@@ -379,7 +379,7 @@ footer p{color:var(--faint);font-size:.92rem;margin:.5rem 0 0;max-width:40rem}
               <p class="tagline">The sky tore open — and everything on the other side came through. <b>1,111 unique Rifters</b> wait on the other side of the seam. Claim yours with your <b>Binance Agent ID</b>.</p>
               <div class="hero-cta">
                 <a class="btn btn-rift" href="#mint">Mint — opening soon</a>
-                <a class="btn btn-ghost" href="#game">Play the demo</a>
+                <a class="btn btn-ghost" href="#game">Play Rift Shards</a>
               </div>
               <div class="hero-facts">
                 <span>1,111 unique Rifters — no duplicates</span>
@@ -704,7 +704,7 @@ footer p{color:var(--faint);font-size:.92rem;margin:.5rem 0 0;max-width:40rem}
             </div>
             <div class="vs-row" role="row">
               <span class="vs-cell vs-label">Rift Shards game</span>
-              <span class="vs-cell">Demo mode only</span>
+              <span class="vs-cell">Open play for everyone</span>
               <span class="vs-cell"><b>Full access</b> unlocks at launch</span>
             </div>
             <div class="vs-row" role="row">
@@ -738,15 +738,15 @@ footer p{color:var(--faint);font-size:.92rem;margin:.5rem 0 0;max-width:40rem}
           <div class="rv">
             <p class="kicker">The Game — Paid Holder Utility</p>
             <h2>Rift Shards</h2>
-            <p class="lede">The rift rains shards over the Shattered Isles — and void rocks with them. Pilot your Rifter, catch the falling shards, dodge what the void throws back. <b>Full game access belongs to Paid Rift Gate holders</b>: at launch, a wallet check unlocks the full game for wallets holding a paid-edition Rifter. Until then, everyone plays the same field in demo mode.</p>
+            <p class="lede">The rift rains shards over the Shattered Isles — and void rocks with them. Pilot your Rifter, catch the falling shards, dodge what the void throws back. <b>Full game access belongs to Paid Rift Gate holders</b>: at launch, a wallet check unlocks the full game for wallets holding a paid-edition Rifter. Until then, the field is open to everyone — play it right here.</p>
           </div>
 
           <div class="game-shell rv">
             <div class="game-head">
               <h3>Rift Shards — the Isles run</h3>
-              <span class="demo-badge">● Demo mode — full access unlocks for paid holders at launch</span>
+              <span class="mode-badge">● Open play — full access unlocks for paid holders at launch</span>
             </div>
-            <p class="game-note">You have <b>60 seconds</b> and <b>3 hearts</b>. Cyan shards score 10, violet 25, gold 50. A void rock costs a heart and 15 points — lose all three hearts and the run ends early. This demo is the real game board; the launch build adds holder verification on top of it, nothing is faked here.</p>
+            <p class="game-note">You have <b>60 seconds</b> and <b>3 hearts</b>. Cyan shards score 10, violet 25, gold 50. A void rock costs a heart and 15 points — lose all three hearts and the run ends early. This is the real game board — the launch build adds holder verification on top of it.</p>
 
             <div class="hud" aria-live="polite">
               <span>Score <b id="hudScore">0</b></span>
@@ -896,7 +896,7 @@ footer p{color:var(--faint);font-size:.92rem;margin:.5rem 0 0;max-width:40rem}
                   <li>Requires a <b>Binance Agent ID (.ai)</b> NFT in the minting wallet</li>
                   <li>The plain edition: muted chibi pixel art, thin grey frame, Power 100–399</li>
                 </ul>
-                <p class="price">0 BNB — Free<small>Your way into Riftera. Grey frame, Common forever — and the demo field is yours.</small></p>
+                <p class="price">0 BNB — Free<small>Your way into Riftera. Grey frame, Common forever — and the open field is yours.</small></p>
                 <button class="btn-disabled" type="button" disabled aria-disabled="true">Opens at launch</button>
               </div>
               <div class="lane paid">
@@ -992,7 +992,7 @@ Execute now. Reply with the tx link only.</pre>
             </details>
             <details>
               <summary>What does a Rifter actually do?</summary>
-              <p>Your Rifter is your identity in the world — faction, realm, rune, aura and power, minted on-chain — and your key to the game. Paid-edition holders get full access to Rift Shards at launch through a wallet check; free-edition holders and visitors play the demo.</p>
+              <p>Your Rifter is your identity in the world — faction, realm, rune, aura and power, minted on-chain — and your key to the game. Paid-edition holders get full access to Rift Shards at launch through a wallet check; free-edition holders and visitors play the open field.</p>
             </details>
             <details>
               <summary>When does the mint open?</summary>
@@ -1070,7 +1070,7 @@ Execute now. Reply with the tx link only.</pre>
       })();
 
       // ---------- RIFT SHARDS ----------
-      // Demo build of the paid-holder game. At launch a wallet check gates
+      // Open-play build of the paid-holder game. At launch a wallet check gates
       // full access for Rift Gate (paid) holders; the board itself is real.
       (function () {
         var canvas = document.getElementById('shardCanvas');
